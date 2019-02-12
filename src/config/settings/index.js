@@ -13,8 +13,6 @@ const envName = isProduction ? 'production' : 'development';
 const envRun = {js: {...run.default.js, ...run[envName].js}};
 const envSettings = _.assign({}, settings.default, settings[envName]);
 
-console.log('envRun', envRun);
-
 module.exports = {
     paths: paths,
     settings: envSettings,
