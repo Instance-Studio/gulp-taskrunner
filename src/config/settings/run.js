@@ -6,6 +6,11 @@ const run = {
             bro: true,
             concat: true,
             uglify: false,
+        },
+        scss: {
+            sourcemaps: true,
+            sass: true,
+            rename: true
         }
     },
     development: {
@@ -14,6 +19,9 @@ const run = {
         js: {
             sourcemaps: false,
             uglify: true,
+        },
+        scss: {
+            sourcemaps: false
         }
     }
 }
