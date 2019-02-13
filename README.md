@@ -31,7 +31,7 @@ $ npm run build:dev
 You should see no errors and there while appear a dist folder in your project
 
 ### Commands
-A table with all available npm commands
+#### All available npm commands
 
 | Command  | Description |
 | --- | --- |
@@ -40,6 +40,18 @@ A table with all available npm commands
 | build:prod | Removes dist folder and compiles all files in production mode |
 | dev | Start a watcher in development mode |
 | release | Runs a release sequence in production mode |
+
+#### All available gulp commands
+
+| Command | Description | Flags |
+| --- | --- | --- |
+| clean:dist | Removes the dist folder | no
+| compile:js | Compiles all js files | --development or --production
+| compile:scss | Compiles all scss files | --development or --production
+| compile:all | Compiles all js and scss files | --development or --production
+| watch:all | Watches and compiles all js and scss files | --development or --production
+| release:all | Remove dist folder and compile all js and scss files | --development or --production
+
 
 ## Authors
 
