@@ -33,18 +33,13 @@ You should see no errors and there while appear a dist folder in your project
 ### Commands
 A table with all available npm commands
 
-╔════════════╦═══════════════════════════════════════════════════════════════╗
-║ clean      ║ Removes the dist folder                                       ║
-╠════════════╬═══════════════════════════════════════════════════════════════╣
-║ build:dev  ║ Compiles all files in development mode                        ║
-╠════════════╬═══════════════════════════════════════════════════════════════╣
-║ build:prod ║ Removes dist folder and compiles all files in production mode ║
-╠════════════╬═══════════════════════════════════════════════════════════════╣
-║ dev        ║ Start a watcher in development mode                           ║
-╠════════════╬═══════════════════════════════════════════════════════════════╣
-║ release    ║ Runs a release sequence in production mode                    ║
-╚════════════╩═══════════════════════════════════════════════════════════════╝
-
+| Command  | Description |
+| --- | --- |
+| clean | Removes the dist folder |
+| build:dev | Compiles all files in development mode |
+| build:prod | Removes dist folder and compiles all files in production mode |
+| dev | Start a watcher in development mode |
+| release | Runs a release sequence in production mode |
 
 ## Authors
 
