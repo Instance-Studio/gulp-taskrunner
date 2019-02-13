@@ -14,7 +14,7 @@ const run = {
       rename: true,
       sassGlob: false,
       postcss: true,
-      cached: true
+      cached: false
     }
   },
   development: {

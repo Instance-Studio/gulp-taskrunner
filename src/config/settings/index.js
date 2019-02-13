@@ -7,9 +7,6 @@ const paths = require("./paths");
 const isProduction = argv.production || false;
 const envName = isProduction ? "production" : "development";
 
-// console.log(run.default);
-
-// const envRun = _.assignIn(run.default, run[envName]);
 const envRun = {
   js: { ...run.default.js, ...run[envName].js },
   scss: { ...run.default.scss, ...run[envName].scss }
