@@ -11,10 +11,14 @@ const run = {
             sourcemaps: true,
             sass: true,
             rename: true,
-            sassGlob: true
+            sassGlob: true,
+            postcss: true
         }
     },
     development: {
+        scss: {
+            postcss: false
+        }
     },
     production: {
         js: {

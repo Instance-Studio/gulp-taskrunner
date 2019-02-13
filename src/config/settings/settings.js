@@ -13,10 +13,27 @@ const config = {
           ]
         ]
       }
+    },
+    scss: {
+      sass: {}
+    },
+    browserSync: {
+      proxy: "studio3am.local",
+      ghostMode: false
+      // https: {
+      //   key: "/etc/apache2/ssl/localhost.key",
+      //   cert: "/etc/apache2/ssl/localhost.crt"
+      // }
     }
   },
   development: {},
-  production: {}
+  production: {
+    scss: {
+      sass: {
+        style: "compressed"
+      }
+    }
+  }
 };
 
 module.exports = config;

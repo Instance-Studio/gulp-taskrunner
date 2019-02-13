@@ -16,7 +16,8 @@ const envRun = {
 };
 const envSettings = {
   js: { ...settings.default.js, ...settings[envName].js },
-  scss: { ...settings.default.scss, ...settings[envName].scss }
+  scss: { ...settings.default.scss, ...settings[envName].scss },
+  browserSync: {...settings.default.browserSync, ...settings[envName].browserSync}
 };
 
 module.exports = {
