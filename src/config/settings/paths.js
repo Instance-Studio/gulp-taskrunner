@@ -12,5 +12,9 @@ module.exports = {
       path: "./dist/css",
       name: "site.min.css"
     }
+  },
+  files: {
+    js: "./src/js/**/*.js",
+    scss: "./src/scss/**/*.scss"
   }
 };
