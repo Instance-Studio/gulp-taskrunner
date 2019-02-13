@@ -8,7 +8,7 @@
     "build:dev": "gulp compile:all --development",
     "build:prod": "npm run clean; gulp compile:all --production",
     "dev": "gulp compile:all --development; gulp watch:all --development",
-    "release": "npm run clean; gulp release:all --production"
+    "release": "gulp release:all --production"
   },
   "keywords": [],
   "author": "Joren Rothman",
