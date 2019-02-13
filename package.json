@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "gulp clean:dist",
+    "build:dev": "gulp compile:all --development",
+    "build:prod": "npm run clean; gulp compile:all --production",
     "dev": "gulp compile:all --development; gulp watch:all --development",
-    "release": "gulp clean:dist --production; gulp release:all --production"
+    "release": "npm run clean; gulp release:all --production"
   },
   "keywords": [],
   "author": "Joren Rothman",
@@ -18,7 +20,10 @@
     "cssnano": "^4.1.9",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-beer": "^1.0.2",
     "gulp-bro": "^1.0.3",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^3.2.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-load-plugins": "^1.5.0",

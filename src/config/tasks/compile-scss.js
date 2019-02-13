@@ -23,11 +23,17 @@ module.exports = (gulp, plugins, config) => {
 
     return gulp
       .src(paths.entry.scss)
-      .pipe(run.sourcemaps ? plugins.sourcemaps.init() : plugins.noop())
       .pipe(run.sassGlob ? plugins.sassGlob() : plugins.noop())
+      .pipe(run.sourcemaps ? plugins.sourcemaps.init() : plugins.noop())
+      .pipe(
+        run.cached ? plugins.cached("scss", settings.cached) : plugins.noop()
+      )
       .pipe(
         run.sass
-          ? plugins.sass(settings.sass).on("error", plugins.sass.logError)
+          ? plugins.sass(settings.sass).on("error", err => {
+              delete plugins.cached.caches['scss'];
+              plugins.beer(err);
+            })
           : plugins.noop()
       )
       .pipe(run.postcss ? plugins.postcss(postcssPlugins) : plugins.noop())

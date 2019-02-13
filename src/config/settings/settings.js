@@ -12,10 +12,16 @@ const config = {
             }
           ]
         ]
+      },
+      cached: {
+        optimizeMemory: true
       }
     },
     scss: {
-      sass: {}
+      sass: {},
+      cached: {
+        optimizeMemory: true
+      }
     },
     browserSync: {
       proxy: "studio3am.local",

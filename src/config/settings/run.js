@@ -1,34 +1,38 @@
 const run = {
-    default: {
-        js: {
-            babel: true,
-            sourcemaps: true,
-            bro: true,
-            concat: true,
-            uglify: false,
-        },
-        scss: {
-            sourcemaps: true,
-            sass: true,
-            rename: true,
-            sassGlob: true,
-            postcss: true
-        }
+  default: {
+    js: {
+      babel: true,
+      sourcemaps: true,
+      bro: true,
+      concat: true,
+      uglify: false,
+      cached: true
     },
-    development: {
-        scss: {
-            postcss: false
-        }
-    },
-    production: {
-        js: {
-            sourcemaps: false,
-            uglify: true,
-        },
-        scss: {
-            sourcemaps: false
-        }
+    scss: {
+      sourcemaps: true,
+      sass: true,
+      rename: true,
+      sassGlob: false,
+      postcss: true,
+      cached: true
     }
-}
+  },
+  development: {
+    scss: {
+      postcss: false
+    }
+  },
+  production: {
+    js: {
+      sourcemaps: false,
+      uglify: true,
+      cached: false
+    },
+    scss: {
+      sourcemaps: false,
+      cached: false
+    }
+  }
+};
 
 module.exports = run;
