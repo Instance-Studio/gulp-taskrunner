@@ -10,7 +10,8 @@ const run = {
         scss: {
             sourcemaps: true,
             sass: true,
-            rename: true
+            rename: true,
+            sassGlob: true
         }
     },
     development: {

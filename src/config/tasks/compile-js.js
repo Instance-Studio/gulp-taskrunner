@@ -1,5 +1,5 @@
-module.exports = function(gulp, plugins, config) {
-  return function() {
+module.exports = (gulp, plugins, config) => {
+  return () => {
     const { paths } = config;
     const run = config.run.js;
     const settings = config.settings.js;

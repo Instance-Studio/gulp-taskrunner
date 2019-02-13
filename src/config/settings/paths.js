@@ -16,5 +16,6 @@ module.exports = {
   files: {
     js: "./src/js/**/*.js",
     scss: "./src/scss/**/*.scss"
-  }
+  },
+  dist: './dist'
 };
