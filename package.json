@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "gulp clean:dist",
+    "dev": "gulp compile:all --development; gulp watch:all --development",
+    "release": "gulp clean:dist --production; gulp release:all --production"
   },
   "keywords": [],
   "author": "Joren Rothman",
