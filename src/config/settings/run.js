@@ -3,7 +3,7 @@ const run = {
     js: {
       babel: true,
       sourcemaps: true,
-      bro: true,
+      browserify: true,
       concat: true,
       uglify: false,
       cached: true
@@ -12,7 +12,7 @@ const run = {
       sourcemaps: true,
       sass: true,
       rename: true,
-      sassGlob: false,
+      sassGlob: true,
       postcss: true,
       cached: false
     }

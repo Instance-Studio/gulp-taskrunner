@@ -13,6 +13,10 @@ const config = {
           ]
         ]
       },
+      browserify: {
+        insertGlobals: true,
+        debug: false
+      },
       cached: {
         optimizeMemory: true
       }
