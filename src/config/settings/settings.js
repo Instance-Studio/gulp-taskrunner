@@ -1,21 +1,14 @@
+const babelify = require('babelify');
+
 const config = {
   default: {
     js: {
-      babel: {
-        presets: [
-          [
-            "@babel/preset-env",
-            {
-              targets: {
-                browsers: ["last 5 versions", "ie >= 9"]
-              }
-            }
-          ]
-        ]
-      },
       browserify: {
         insertGlobals: false,
-        debug: true
+        debug: true,
+        transform: [
+          babelify.configure({presets: ['@babel/preset-env']})
+        ]
       },
       cached: {
         optimizeMemory: true

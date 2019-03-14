@@ -9,7 +9,6 @@ module.exports = (gulp, plugins, config) => {
       .pipe(run.cached ? plugins.cached("js", settings.cached) : plugins.noop())
       .pipe(run.sourcemaps ? plugins.sourcemaps.init() : plugins.noop())
       .pipe(run.browserify ? plugins.bro(settings.browserify) : plugins.noop())
-      .pipe(run.babel ? plugins.babel(settings.babel) : plugins.noop())
       .pipe(run.concat ? plugins.concat(paths.out.js.name) : plugins.noop())
       .pipe(run.uglify ? plugins.uglify() : plugins.noop())
       .pipe(plugins.sourcemaps.write("./"))
