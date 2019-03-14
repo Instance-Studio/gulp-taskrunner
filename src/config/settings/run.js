@@ -6,7 +6,7 @@ const run = {
       browserify: true,
       concat: true,
       uglify: false,
-      cached: true
+      cached: false
     },
     scss: {
       sourcemaps: true,

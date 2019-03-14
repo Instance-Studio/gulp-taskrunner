@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    js: ["./src/js/site.js", "./src/js/vendor/*.js"],
+    js: ["./src/js/vendor/*.js"],
     scss: "./src/scss/base.scss"
   },
   out: {
@@ -17,5 +17,5 @@ module.exports = {
     js: "./src/js/**/*.js",
     scss: "./src/scss/**/*.scss"
   },
-  dist: './dist'
+  dist: "./dist"
 };

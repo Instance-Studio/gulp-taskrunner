@@ -17,10 +17,12 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "browser-sync": "^2.26.3",
+    "browserify-shim": "^3.8.14",
     "cssnano": "^4.1.9",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-beer": "^1.0.2",
+    "gulp-bro": "^1.0.3",
     "gulp-browserify": "^0.5.1",
     "gulp-cached": "^1.1.1",
     "gulp-changed": "^3.2.0",
@@ -38,5 +40,16 @@
     "minimist": "^1.2.0",
     "node-sass": "^4.11.0",
     "postcss-preset-env": "^6.5.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jquery"
   }
 }

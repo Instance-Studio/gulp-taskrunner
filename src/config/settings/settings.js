@@ -14,8 +14,8 @@ const config = {
         ]
       },
       browserify: {
-        insertGlobals: true,
-        debug: false
+        insertGlobals: false,
+        debug: true
       },
       cached: {
         optimizeMemory: true

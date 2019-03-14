@@ -31,7 +31,7 @@ module.exports = (gulp, plugins, config) => {
       .pipe(
         run.sass
           ? plugins.sass(settings.sass).on("error", err => {
-              delete plugins.cached.caches['scss'];
+              delete plugins.cached.caches["scss"];
               plugins.beer(err);
             })
           : plugins.noop()
