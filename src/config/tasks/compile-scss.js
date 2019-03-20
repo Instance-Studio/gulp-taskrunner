@@ -1,5 +1,6 @@
 const postcssPresetEnv = require("postcss-preset-env");
 const cssnano = require("cssnano");
+const through2 = require('through2');
 
 const postcssPlugins = [
   postcssPresetEnv({ browsers: ["last 5 versions", "ie >= 9"] }),
@@ -15,6 +16,7 @@ const postcssPlugins = [
   })
 ];
 
+
 module.exports = (gulp, plugins, config) => {
   return () => {
     const { paths } = config;
@@ -23,11 +25,8 @@ module.exports = (gulp, plugins, config) => {
 
     return gulp
       .src(paths.entry.scss)
-      .pipe(run.sassGlob ? plugins.sassGlob() : plugins.noop())
+      .pipe(run.sassGlob ? plugins.sassBulkImport() : plugins.noop())
       .pipe(run.sourcemaps ? plugins.sourcemaps.init() : plugins.noop())
-      .pipe(
-        run.cached ? plugins.cached("scss", settings.cached) : plugins.noop()
-      )
       .pipe(
         run.sass
           ? plugins.sass(settings.sass).on("error", err => {
@@ -39,6 +38,14 @@ module.exports = (gulp, plugins, config) => {
       .pipe(run.postcss ? plugins.postcss(postcssPlugins) : plugins.noop())
       .pipe(run.rename ? plugins.rename(paths.out.scss.name) : plugins.noop())
       .pipe(run.sourcemaps ? plugins.sourcemaps.write("./") : plugins.noop())
+      .pipe(
+        through2.obj(function(file, enc, cb) {
+          let date = new Date();
+          file.stat.atime = date;
+          file.stat.mtime = date;
+          cb(null, file);
+        })
+      )
       .pipe(gulp.dest(paths.out.scss.path));
   };
 };

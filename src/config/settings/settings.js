@@ -9,16 +9,10 @@ const config = {
         transform: [
           babelify.configure({presets: ['@babel/preset-env']})
         ]
-      },
-      cached: {
-        optimizeMemory: true
       }
     },
     scss: {
       sass: {},
-      cached: {
-        optimizeMemory: true
-      }
     },
     browserSync: {
       proxy: "studio3am.local",

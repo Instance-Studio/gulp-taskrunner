@@ -6,7 +6,6 @@ const run = {
       browserify: true,
       concat: true,
       uglify: false,
-      cached: false
     },
     scss: {
       sourcemaps: true,
@@ -14,7 +13,6 @@ const run = {
       rename: true,
       sassGlob: true,
       postcss: true,
-      cached: false
     }
   },
   development: {
@@ -26,11 +24,9 @@ const run = {
     js: {
       sourcemaps: false,
       uglify: true,
-      cached: false
     },
     scss: {
       sourcemaps: false,
-      cached: false
     }
   }
 };
