@@ -15,6 +15,7 @@ const {
 addTask("clean:dist", "clean-dist");
 addTask("compile:js", "compile-js");
 addTask("compile:scss", "compile-scss");
+addTask("flipping a table", "table-flip");
 addMultiTask("compile:all", ["compile:js", "compile:scss"]);
 
 gulp.task("browserSync:reload", done => {
@@ -38,4 +39,4 @@ gulp.task("watch:all", () => {
 });
 
 // Basic release tasks
-addMultiTask("release:all", ["clean:dist", "compile:js", "compile:scss"]);
+addMultiTask("release:all", ["clean:dist", "compile:js", "compile:scss", "flipping a table"]);
