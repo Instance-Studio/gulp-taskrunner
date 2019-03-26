@@ -1,16 +1,10 @@
 let gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const gutil = require("gulp-util");
-const notify = require('gulp-notify');
 
 const gulp_src = gulp.src;
 
 const onError = function(err) {
-    notify({
-        title: `Error in ${err.plugin}`,
-        message: `Check you're console for a detailed message`
-    }).write(err);
-
     gutil.log(gutil.colors.red(`Error: ${err.message}`));
 
     this.emit("end");
