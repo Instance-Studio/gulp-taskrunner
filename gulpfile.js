@@ -1,6 +1,6 @@
 "use strict";
 
-const gulp = require("gulp");
+const gulp = require("./src/config/gulp-helpers/gulp");
 const gulpLoadPlugins = require("gulp-load-plugins");
 const plugins = gulpLoadPlugins();
 const browserSync = require("browser-sync");

@@ -5,10 +5,11 @@ const config = {
     js: {
       browserify: {
         insertGlobals: false,
-        debug: true,
+        debug: false,
         transform: [
           babelify.configure({presets: ['@babel/preset-env']})
-        ]
+        ],
+        error: 'emit'
       }
     },
     scss: {
