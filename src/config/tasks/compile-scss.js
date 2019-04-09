@@ -3,7 +3,10 @@ const cssnano = require("cssnano");
 const through2 = require("through2");
 
 const postcssPlugins = [
-  postcssPresetEnv({ browsers: ["last 5 versions", "ie >= 9"] }),
+  postcssPresetEnv({ 
+    browsers: ["last 5 versions", "ie >= 9"],
+    autoprefixer: { grid: true } 
+  }),
   cssnano({
     preset: [
       "default",
