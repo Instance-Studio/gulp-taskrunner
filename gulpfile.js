@@ -25,7 +25,6 @@ gulp.task("browserSync:reload", done => {
 
 // Basic watch tasks
 gulp.task("watch:all", () => {
-  plugins.beer.server.start();
   browserSync(config.settings.browserSync);
 
   gulp.watch(
