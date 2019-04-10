@@ -2,7 +2,8 @@ module.exports = {
   entry: {
     js: "./src/js/site.js",
     scss: "./src/scss/base.scss",
-    img: "./src/img/**/*"
+    img: "./src/img/**/*",
+    font: "./src/fonts/**/*"
   },
   out: {
     js: {
@@ -15,6 +16,9 @@ module.exports = {
     },
     img: {
       path: "./dist/img"
+    },
+    font: {
+      path: "./dist/fonts"
     }
   },
   files: {

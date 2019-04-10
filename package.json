@@ -8,6 +8,7 @@
     "build:dev": "gulp compile:all --development",
     "build:prod": "npm run clean; gulp compile:all --production",
     "build:images": "gulp copy:images --production",
+    "build:fonts": "gulp copy:fonts --production",
     "dev": "gulp compile:all --development; gulp watch:all --development",
     "release": "gulp release:all --production"
   },
