@@ -7,6 +7,7 @@
     "clean": "gulp clean:dist",
     "build:dev": "gulp compile:all --development",
     "build:prod": "npm run clean; gulp compile:all --production",
+    "build:images": "gulp copy:images --production",
     "dev": "gulp compile:all --development; gulp watch:all --development",
     "release": "gulp release:all --production"
   },

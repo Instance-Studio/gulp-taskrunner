@@ -16,6 +16,7 @@ addTask("clean:dist", "clean-dist");
 addTask("compile:js", "compile-js");
 addTask("compile:scss", "compile-scss");
 addTask("flipping a table", "table-flip");
+addTask("copy:images", "copy-images");
 addMultiTask("compile:all", ["compile:js", "compile:scss"]);
 
 gulp.task("browserSync:reload", done => {
@@ -35,7 +36,11 @@ gulp.task("watch:all", () => {
     [config.paths.files.js],
     gulp.series("compile:js", "browserSync:reload")
   );
+  gulp.watch(
+    [config.paths.entry.img],
+    gulp.series("copy:images")
+  );
 });
 
 // Basic release tasks
-addMultiTask("release:all", ["clean:dist", "compile:js", "compile:scss", "flipping a table"]);
+addMultiTask("release:all", ["copy:images", "clean:dist", "compile:js", "compile:scss", "flipping a table"]);

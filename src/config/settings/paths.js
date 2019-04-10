@@ -1,7 +1,8 @@
 module.exports = {
   entry: {
-    js: ["./src/js/site.js"],
-    scss: "./src/scss/base.scss"
+    js: "./src/js/site.js",
+    scss: "./src/scss/base.scss",
+    img: "./src/img/**/*"
   },
   out: {
     js: {
@@ -11,6 +12,9 @@ module.exports = {
     scss: {
       path: "./dist/css",
       name: "site.min.css"
+    },
+    img: {
+      path: "./dist/img"
     }
   },
   files: {
