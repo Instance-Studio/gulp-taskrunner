@@ -1,19 +1,21 @@
-const babelify = require('babelify');
+const babelify = require("babelify");
 
 const config = {
   default: {
     js: {
       browserify: {
-        insertGlobals: false,
-        debug: false,
+        debug: true,
         transform: [
-          babelify.configure({presets: ['@babel/preset-env']})
+          babelify.configure({
+            presets: ["@babel/preset-env"],
+            sourceMaps: true
+          })
         ],
-        error: 'emit'
+        error: "emit"
       }
     },
     scss: {
-      sass: {},
+      sass: {}
     },
     browserSync: {
       proxy: "studio3am.local",

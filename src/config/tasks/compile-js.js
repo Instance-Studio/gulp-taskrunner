@@ -8,8 +8,8 @@ module.exports = (gulp, plugins, config) => {
 
     return gulp
       .src(paths.entry.js)
-      .pipe(run.sourcemaps ? plugins.sourcemaps.init() : plugins.noop())
       .pipe(run.browserify ? plugins.bro(settings.browserify) : plugins.noop())
+      .pipe(run.sourcemaps ? plugins.sourcemaps.init({loadMaps: true}) : plugins.noop())
       .pipe(run.concat ? plugins.concat(paths.out.js.name) : plugins.noop())
       .pipe(run.uglify ? plugins.uglify() : plugins.noop())
       .pipe(plugins.sourcemaps.write("./"))
