@@ -53,5 +53,8 @@
   },
   "browserify-shim": {
     "jquery": "global:jquery"
-  }
+  },
+  "browserslist":  [
+    "last 5 versions"
+  ]
 }
