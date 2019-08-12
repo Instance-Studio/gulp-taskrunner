@@ -53,4 +53,4 @@ gulp.task("watch:all", () => {
 });
 
 // Basic release tasks
-addMultiTask("release:all", ["clean:dist", "compile:js", "compile:scss", "copy:images", "copy:fonts", "flipping a table"]);
+addMultiTask("release:all", ["clean:dist", "compile:js", "compile:scss", "copy:images", "copy:fonts", "copy:vendor", "flipping a table"]);
