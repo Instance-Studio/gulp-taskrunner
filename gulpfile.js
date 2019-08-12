@@ -18,6 +18,7 @@ addTask("compile:scss", "compile-scss");
 addTask("flipping a table", "table-flip");
 addTask("copy:images", "copy-images");
 addTask("copy:fonts", "copy-fonts");
+addTask("copy:vendor", "copy-vendor");
 addMultiTask("compile:all", ["compile:js", "compile:scss"]);
 
 gulp.task("browserSync:reload", done => {
@@ -45,6 +46,10 @@ gulp.task("watch:all", () => {
     [config.paths.entry.font],
     gulp.series("copy:fonts")
   );
+  gulp.watch(
+    [config.paths.entry.vendor],
+    gulp.series("copy:vendor")
+  )
 });
 
 // Basic release tasks

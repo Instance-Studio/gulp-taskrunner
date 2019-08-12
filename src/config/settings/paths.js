@@ -3,7 +3,8 @@ module.exports = {
     js: "./src/js/site.js",
     scss: "./src/scss/base.scss",
     img: "./src/img/**/*",
-    font: "./src/fonts/**/*"
+    font: "./src/fonts/**/*",
+    vendor: "./src/js/vendor/**/*"
   },
   out: {
     js: {
@@ -19,6 +20,9 @@ module.exports = {
     },
     font: {
       path: "./dist/fonts"
+    },
+    vendor: {
+      path: "./dist/js/vendor"
     }
   },
   files: {

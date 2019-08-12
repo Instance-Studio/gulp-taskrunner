@@ -10,7 +10,7 @@
         "build:images": "gulp copy:images --production",
         "build:fonts": "gulp copy:fonts --production",
         "build:assets": "gulp copy:images --production; gulp copy:fonts --production",
-        "dev": "gulp compile:all --development; gulp watch:all --development",
+        "dev": "gulp compile:all --development; gulp copy:vendor; gulp watch:all --development",
         "release": "gulp release:all --production"
     },
     "keywords": [],
@@ -56,6 +56,6 @@
         ]
     },
     "browserify-shim": {
-        "jquery": "$"
+        "jquery": "./dist/js/vendor/jQuery-3.4.1.min.js"
     }
 }
