@@ -6,6 +6,7 @@ const run = {
       browserify: true,
       concat: true,
       uglify: false,
+      stripDebug: false
     },
     scss: {
       sourcemaps: true,
@@ -24,6 +25,7 @@ const run = {
     js: {
       sourcemaps: false,
       uglify: true,
+      stripDebug: true
     },
     scss: {
       sourcemaps: false,

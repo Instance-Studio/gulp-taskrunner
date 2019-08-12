@@ -21,6 +21,7 @@ module.exports = (gulp, plugins, config) => {
           cb(null, file);
         })
       )
+      .pipe(run.stripDebug ? plugins.stripDebug() : plugins.noop())
       .pipe(gulp.dest(paths.out.js.path));
   };
 };

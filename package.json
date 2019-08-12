@@ -35,13 +35,14 @@
         "gulp-sass": "^4.0.2",
         "gulp-sass-bulk-import": "^1.0.1",
         "gulp-sourcemaps": "^2.6.5",
+        "gulp-strip-debug": "^3.0.0",
         "gulp-uglify": "^3.0.2",
         "gulp-util": "^3.0.8",
+        "js-yaml": ">=3.13.1",
         "minimist": "^1.2.0",
         "node-sass": "^4.12.0",
         "postcss-preset-env": "^6.6.0",
-        "through2": "^3.0.1",
-        "js-yaml": ">=3.13.1"
+        "through2": "^3.0.1"
     },
     "dependencies": {
         "babel-polyfill": "^6.26.0",
@@ -56,6 +57,6 @@
         ]
     },
     "browserify-shim": {
-        "jquery": "./dist/js/vendor/jQuery-3.4.1.min.js"
+        "jquery": "./dist/js/vendor/jquery-3.4.1.min.js"
     }
 }
