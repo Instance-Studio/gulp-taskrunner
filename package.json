@@ -49,5 +49,13 @@
     },
     "browserslist": [
         "last 5 versions"
-    ]
+    ],
+    "browserify": {
+        "transform": [
+            "browserify-shim"
+        ]
+    },
+    "browserify-shim": {
+        "jquery": "$"
+    }
 }
