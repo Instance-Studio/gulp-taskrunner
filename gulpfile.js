@@ -19,7 +19,7 @@ addTask("flipping a table", "table-flip");
 addTask("copy:images", "copy-images");
 addTask("copy:fonts", "copy-fonts");
 addTask("copy:vendor", "copy-vendor");
-addMultiTask("compile:all", ["compile:js", "compile:scss"]);
+addMultiTask("compile:all", ["copy:vendor", "compile:js", "compile:scss"]);
 
 gulp.task("browserSync:reload", done => {
   reload();
