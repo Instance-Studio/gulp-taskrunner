@@ -1,15 +1,15 @@
 "use strict";
 
-const gulp = require("./src/config/gulp-helpers/gulp");
+const gulp = require("./config/gulp-helpers/gulp");
 const gulpLoadPlugins = require("gulp-load-plugins");
 const plugins = gulpLoadPlugins();
 const browserSync = require("browser-sync");
 const reload = browserSync.reload;
-const config = require("./src/config/settings");
+const config = require("./config/settings");
 const {
   addTask,
   addMultiTask
-} = require("./src/config/gulp-helpers/task-functions")(gulp, plugins, config);
+} = require("./config/gulp-helpers/task-functions")(gulp, plugins, config);
 
 // Basic dev scripts
 addTask("clean:dist", "clean-dist");
